@@ -5,6 +5,11 @@
       "cache": false,
       "dependsOn": ["post-install"]
     },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"],
+      "exclude": ["apps/ui-playground", "apps/timeless-ui-docs"]
+    },
     "@calcom/prisma#db-migrate": {
       "cache": false,
       "dependsOn": ["@calcom/prisma#db-up"],
@@ -125,11 +130,6 @@
         "PLAIN_CHAT_HMAC_SECRET_KEY",
         "NEXT_PUBLIC_PLAIN_CHAT_EXCLUDED_PATHS"
       ]
-    },
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"],
-      "exclude": ["apps/ui-playground", "apps/timeless-ui-docs"]
     },
     "db-deploy": {
       "cache": false,
