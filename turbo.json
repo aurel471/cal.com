@@ -128,7 +128,7 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": ["dist/**", ".next/**"],
       "exclude": ["apps/ui-playground", "apps/timeless-ui-docs"]
     },
     "db-deploy": {
